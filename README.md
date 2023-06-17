@@ -1,5 +1,7 @@
 # qb-menu
-Simple and clean CSS qb-menu edit
+Simple, clean and modern looking qb-menu css edit.
+
+Join our Discord server for future updated and more script releases : https://discord.gg/rp6ynCJTKK
 
 Preview : 
 
