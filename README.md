@@ -9,7 +9,7 @@ Preview :
 
 # Usage
 
-Simply download and replace it with your current qb-menu
+Simply download and replace it with your current qb-menu.
 
 # Credits
 
