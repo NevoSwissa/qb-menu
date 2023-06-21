@@ -46,7 +46,12 @@ body {
   color: #333333;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button.show {
+  opacity: 1;
 }
 
 .button:hover {
@@ -62,6 +67,46 @@ body {
   border-radius: 50%;
   background-color: #333333;
   color: #ffffff;
+}
+
+#search-bar {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #f2f2f2;
+  width: 100%;
+}
+
+#search-input {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 100%;
+  font-size: 14px;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+#search-button {
+  padding: 5px;
+  border: none;
+  border-radius: 50%;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#container.menu-open #search-bar {
+  display: flex;
+}
+
+#no-results {
+  display: none;
 }
 
 .title {
