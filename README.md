@@ -5,7 +5,7 @@ Join our Discord server for future updated and more script releases : https://di
 
 Preview : 
 
-![image](https://github.com/NevoSwissa/qb-menu/assets/96447671/19fd3318-7948-4b8c-8440-87f1fb11e8d2)
+![image](https://github.com/NevoSwissa/qb-menu/assets/96447671/1a3a3da7-f61c-4bf3-8e9b-397419c34390)
 
 # Usage
 
