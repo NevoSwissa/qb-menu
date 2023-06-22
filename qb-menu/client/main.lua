@@ -3,7 +3,6 @@ local QBCore = exports['qb-core']:GetCoreObject()
 local headerShown = false
 local sendData = nil
 
--- Functions
 local function openMenu(data)
     if not data or not next(data) then return end
 	for _,v in pairs(data) do
@@ -45,17 +44,13 @@ local function showHeader(data)
     })
 end
 
--- Events
-
-RegisterNetEvent('qb-menu:client:openMenu', function(data)
+AddEventHandler('qb-menu:client:openMenu', function(data)
     openMenu(data)
 end)
 
 RegisterNetEvent('qb-menu:client:closeMenu', function()
     closeMenu()
 end)
-
--- NUI Callbacks
 
 RegisterNUICallback('clickedButton', function(option, cb)
     if headerShown then headerShown = false end
@@ -90,8 +85,6 @@ RegisterNUICallback('closeMenu', function(_, cb)
     cb('ok')
 end)
 
--- Command and Keymapping
-
 RegisterCommand('playerfocus', function()
     if headerShown then
         SetNuiFocus(true, true)
@@ -99,8 +92,6 @@ RegisterCommand('playerfocus', function()
 end)
 
 RegisterKeyMapping('playerFocus', 'Give Menu Focus', 'keyboard', 'LMENU')
-
--- Exports
 
 exports('openMenu', openMenu)
 exports('closeMenu', closeMenu)

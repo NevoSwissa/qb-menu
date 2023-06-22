@@ -46,11 +46,6 @@ body {
   color: #333333;
   font-size: 1rem;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.button.show {
   opacity: 1;
 }
 
@@ -72,7 +67,6 @@ body {
 #search-bar {
   display: none;
   align-items: center;
-  justify-content: flex-end;
   padding: 10px;
   background-color: #f2f2f2;
   width: 100%;
@@ -84,7 +78,6 @@ body {
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
-  margin-right: 10px;
   width: 100%;
   font-size: 14px;
   outline: 2px solid #ffffff;
@@ -97,8 +90,15 @@ body {
   border-radius: 50%;
   background-color: #333333;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 12px;
   cursor: pointer;
+  position: absolute;
+  right: 13px;
+  transition: transform 0.3s ease;
+}
+
+#search-button:hover {
+  transform: scale(1.1);
 }
 
 #container.menu-open #search-bar {
@@ -107,6 +107,15 @@ body {
 
 #no-results {
   display: none;
+}
+
+.no-menus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #333333;
+  font-size: 1rem;
 }
 
 .title {
