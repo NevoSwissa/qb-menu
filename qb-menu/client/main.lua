@@ -44,7 +44,7 @@ local function showHeader(data)
     })
 end
 
-AddEventHandler('qb-menu:client:openMenu', function(data)
+RegisterNetEvent('qb-menu:client:openMenu', function(data)
     openMenu(data)
 end)
 
