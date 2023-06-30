@@ -3,8 +3,18 @@ local QBCore = exports['qb-core']:GetCoreObject()
 local headerShown = false
 local sendData = nil
 
+local function sortData(data, skipfirst)
+    local header = data[1]
+    local tempData = data
+    if skipfirst then table.remove(tempData,1) end
+    table.sort(tempData, function(a,b) return a.header < b.header end)
+    if skipfirst then table.insert(tempData,1,header) end
+    return tempData
+end
+
 local function openMenu(data)
     if not data or not next(data) then return end
+    if sort then data = sortData(data, skipFirst) end
 	for _,v in pairs(data) do
 		if v["icon"] then
 			local img = "qb-inventory/html/"
@@ -85,8 +95,8 @@ RegisterNUICallback('closeMenu', function(_, cb)
     cb('ok')
 end)
 
-RegisterCommand('playerfocus', function()
-    if headerShown then
+RegisterCommand('playerFocus', function()
+    if headerShown or sendData then
         SetNuiFocus(true, true)
     end
 end)
