@@ -1,4 +1,5 @@
 let buttonParams = [];
+let darkModeEnabled = true; // Set this variable to true for dark mode, false for default colors
 
 $(document).ready(function() {
     $("#search-input").on("keyup", function() {
@@ -57,6 +58,7 @@ const openMenu = (data = null) => {
     });
   }
 
+  $("#container").addClass(darkModeEnabled ? "dark-mode" : "");
   $("#container").addClass("menu-open");
   $("#buttons").html(html);
   filterButtons("");
