@@ -58,7 +58,11 @@ const openMenu = (data = null) => {
     });
   }
 
-  $("#container").addClass(darkModeEnabled ? "dark-mode" : "");
+  const container = $("#container");
+  container.removeClass("dark-mode");
+  if (darkModeEnabled) {
+    container.addClass("dark-mode");
+  }
   $("#container").addClass("menu-open");
   $("#buttons").html(html);
   filterButtons("");
